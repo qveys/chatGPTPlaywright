@@ -25,7 +25,7 @@ const callWebhook = () => {
   const page = await context.newPage();
 
   try {
-    await page.goto('https://chatgpt.com/auth/login');
+    await page.goto('https://auth.openai.com/log-in');
     await page.waitForURL('**auth0.openai.com/**', { timeout: 15000 });
 
     await page.fill('input[type="email"]', CHATGPT_EMAIL);
